@@ -1,0 +1,40 @@
+<section class="tout" id="interests">
+    <div class="container">
+      <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Interests</h2>
+                <hr />
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-sm-6">
+		    <p>
+			    My personal interests include:
+        </p>
+			<ul>
+         {% for interest in page.interests %}
+           <li>{{interest}}</li>
+         {% endfor %}
+			</ul>
+		</div>
+    <div class="col-sm-6">
+      <h3 style="margin-top:0" class="text-center">Recent Projects</h3>
+		  <ul>
+         {% for project in page.projects %}
+           <li>{{project}}</li>
+         {% endfor %}
+		   </ul>
+      </div>
+    {% if page.other_stuff %}
+    <div class="col-sm-6">
+      <h3 style="margin-top:0" class="text-center">Other Stuff</h3>
+		  <ul>
+         {% for thing in page.other_stuff %}
+           <li>{{thing}}</li>
+         {% endfor %}
+		   </ul>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
