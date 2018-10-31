@@ -304,9 +304,15 @@ section.tout {
     z-index: 2;
 }
 
+button.navbar-toggle {
+  display: none;
+}
 @media(min-width:767px) {
     #startups .portfolio-item {
         margin: 0 0 30px;
+    }
+    .navbar-collapse {
+      font-size: 0.9em;
     }
 }
 
