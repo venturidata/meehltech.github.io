@@ -27,7 +27,8 @@ color:
   primary: 072B48
   # primary: 284672
   primary-rgb: "33, 150, 243"
-  secondary: 284672
+  #secondary: 284672
+  secondary: 224777
   # secondary: 072B48
   secondary-dark: 29455b
   section-tout: eaedf1
