@@ -1,0 +1,36 @@
+  <div class="col-xs-12 col-sm-6">
+    <a href="{{ post.url }}">
+      <section class="post_card post_card_short">
+        <!--img src="{{ post.hero_image_url }}" class="hero" /-->
+        <div style="background-image:url({{ post.hero_image_url }});" class="hero-img">
+
+        </div>
+
+        <div class="post_title" title="{{ post.title }}">{{ post.title }}</div>
+
+        <div class="excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</div>
+
+        <div class="tags">
+          {% for tag in post.tags %}
+            <span class="tag">#{{tag}}</span>
+          {% endfor %}
+        </div>
+
+        {% comment %}
+
+          {% assign post = include.post %}
+          {% assign author = post.author | append: '.html' %}
+          {% include {{author}} %}
+
+        {% if post.subheading != "" %}
+        <div class="subheading">{{post.subheading}}</div>
+        {% endif %}
+        {% endcomment %}
+
+
+        {% comment %}
+        <div class="length">{{ post.content | number_of_words }} words</div>
+        {% endcomment %}
+      </section>
+    </a>
+  </div>

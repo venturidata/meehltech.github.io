@@ -1,5 +1,25 @@
 <section id="about">
   <div class="container">
+    {% assign author_posts = site.posts | where: "author", "keith" %}
+    {% if author_posts %}
+    <div class="row">
+      <div class="col-lg-12 ">
+        <h3>My Recent Articles</h3>
+      </div>
+    </div>
+    <div class="row">
+      {% for post in author_posts limit:2 %}
+        {% include post_card_short.html post=post %}
+      {% endfor %}
+    </div>
+    <div class="row">
+      <div class="col-lg-12 ">
+        <br/>
+        <br/>
+        <br/>
+      </div>
+    </div>
+    {% endif %}
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2>About Me</h2>

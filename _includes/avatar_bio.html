@@ -1,0 +1,29 @@
+<div class="author">
+
+{% if include.link %}
+  <a href="/{{include.link}}">
+{% endif %}
+  <div style="background-image:url(/img/{{ include.name | split: " " | first | downcase }}_avatar.png);" class="avatar"></div>
+{% if include.link %}
+  </a>
+{% endif %}
+  <!--img src="/img/{{post.author}}_icon.png" class="avatar"/-->
+{% if include.link %}
+  <a href="/{{include.link}}">
+{% endif %}
+  <div class="info">
+    <span>{{include.name}}</span>
+    {% capture publish_date %}
+      {% if post.date %}
+        {{post.date}}
+      {% else %}
+        {{page.date}}
+      {% endif %}
+    {% endcapture %}
+    <span class="title">{{include.title}}</span>
+    <span class="date">{{publish_date | date: "%a, %b %d, %Y"}}</span>
+  </div>
+{% if include.link %}
+  </a>
+{% endif %}
+</div>

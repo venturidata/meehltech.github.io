@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% include head.html %}
 <html>
-  <body id="page-top" class="index">
+  <body class="index">
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
        <div class="container">
@@ -31,6 +31,9 @@
                    <li class="page-scroll">
                        <a href="#contact">Contact</a>
                    </li>
+                   <li class="page-scroll">
+                       <a href="/blog">Blog</a>
+                   </li>
                </ul>
            </div>
            <!-- /.navbar-collapse -->
@@ -39,11 +42,11 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header id="page-top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
-                    <img class="profile-img" src="{{ site.baseurl }}/img/{{page.image}}" alt="{{ page.title }}">
+                    <img class="profile-img" src="{{ site.baseurl }}/img/{{page.full_name | split: ' ' | first | downcase}}.jpg" alt="{{ page.full_name }}">
                 </div>
                 <div class="col-lg-10">
                     <div class="intro-text">
@@ -63,6 +66,8 @@
 
     {% include about_me.html %}
     {% include interests.html %}
+
+
     {% include bio_contact_form.html %}
 
     {% include footer.html %}

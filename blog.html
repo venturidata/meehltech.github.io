@@ -1,0 +1,16 @@
+---
+layout: master
+title: meehl technologies blog
+heading: meehl technologies blog
+---
+
+<div id="container">
+  <section id="blog">
+    <h2>from the blog</h2>
+    <div class="row">
+      {% for post in site.posts  %}
+        {% include post_card.html post=post %}
+      {% endfor %}
+    </div>
+  </section>
+</div>

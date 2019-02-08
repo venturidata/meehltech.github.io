@@ -2,7 +2,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>{% if page.title %}{{ page.title }}{% else %}{{ page.name }}{% endif %}</title>
-      <meta name="viewport" content="width=device-width, shrink-to-fit=no">
+      <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
       <meta name="description" content="{{page.description}} {{ page.skills }}">
       <meta name="keywords" content="{{ page.keywords }} {{page.skills}}" />
       <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.canonical_url }}">
@@ -10,6 +10,9 @@
 
       <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
       <link rel="stylesheet" href="{{ site.baseurl }}{{ "/style.css" }}">
+      <link rel="stylesheet" href="{{ site.baseurl }}{{ "/css/monokai.css" }}">
+      <link rel="stylesheet" href="{{ site.baseurl }}{{ "/css/main.css" }}">
+      <link rel="stylesheet" href="{{ site.baseurl }}{{ "/css/lightbox.min.css" }}">
 
       <!-- Google verification -->
       {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
@@ -19,8 +22,8 @@
 
       <!-- Custom Fonts -->
       <link rel="stylesheet" href="{{ site.baseurl }}{{ "/css/font-awesome/css/font-awesome.min.css" }}">
-      <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-      <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+      <link href="//fonts.googleapis.com/css?family=Lato:100,400,700,400italic,700italic" rel="stylesheet" type="text/css">
       <link href="https://fonts.googleapis.com/css?family=Jura:300,400,500,600,700" rel="stylesheet">
 
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

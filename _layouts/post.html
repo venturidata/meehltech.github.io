@@ -1,0 +1,30 @@
+---
+layout: master
+heading: "Meehl Technologies Blog"
+---
+<article class="post">
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      {% include lb-image.html src=page.hero_image_url title=page.hero_image_title caption=page.hero_image_caption css_class="hero_image" %}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-0 col-md-1"></div>
+    <div class="col-sm-12 col-md-10">
+      <h1>{{ page.title }}</h1>
+      {% assign auth = page.author | append: ".html" %}
+      {% include {{auth}} link=true %}
+      <h2 class="subheading">{{page.subheading}}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-0 col-md-1"></div>
+    <div class="col-sm-12 col-md-10">
+      <div class="entry">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+</article>
