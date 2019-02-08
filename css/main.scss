@@ -44,14 +44,6 @@ body {
   font-size: 0.85rem;
 }
 
-// nav.navbar-default, page-container > .page-title {
-//   background: radial-gradient(circle farthest-side at 50% 0,#1d3f6e,#224777 91%);
-//   h2 {
-//     color: #e3edf9;
-//     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-//   }
-// }
-
 ul, ol, p {
   font-size: 1.3rem;
   margin-bottom: 2em;
@@ -368,7 +360,6 @@ section.post_card {
   border-bottom: $highlight-border-desaturated;
   border-top: 1px solid rgba(0, 0, 0, 0.4);
   min-height: 36.5rem;
-  max-height: 36.5rem;
 
   a, .blog_summaries .post_card a:hover {
     text-decoration: none;
