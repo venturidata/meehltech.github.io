@@ -27,4 +27,6 @@ heading: "Meehl Technologies Blog"
     </div>
   </div>
 
+  {% assign author_footer = page.author | split: " " | first | downcase | append: "_footer.html" %}
+  {% include {{author_footer}} link=true %}
 </article>

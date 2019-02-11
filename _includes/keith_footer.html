@@ -1,0 +1,9 @@
+{% if include.link %}
+  {% assign link_path = "keith" %}
+{% endif %}
+
+
+{% capture bio %}
+Keith is a software developer and consultant who works with companies of all sizes to help them solve business challenges through innovative software solutions. Outside the office, he's happiest building something using a 3D printer and an Arduino, sailing, or running.
+{% endcapture %}
+{% include avatar_footer.html name="Keith Meehl" bio=bio title="Principal Engineer @ Meehl Technologies" link=link_path %}

@@ -1,0 +1,26 @@
+  <div class="row">
+    <div class="col-sm-0 col-md-1"></div>
+    <div class="col-sm-8 col-md-6">
+
+      <div class="author author_footer">
+      {% if include.link %}
+        <a href="/{{include.link}}">
+      {% endif %}
+        <div style="background-image:url(/img/{{ include.name | split: " " | first | downcase }}_avatar.png);" class="avatar"></div>
+      {% if include.link %}
+        </a>
+      {% endif %}
+        <!--img src="/img/{{post.author}}_icon.png" class="avatar"/-->
+      {% if include.link %}
+        <a href="/{{include.link}}">
+      {% endif %}
+        <div class="info">
+          <span class="title">{{include.title}}</span>
+          <span>{{include.bio}}</span>
+        </div>
+      {% if include.link %}
+        </a>
+      {% endif %}
+      </div>
+    </div>
+  </div>
