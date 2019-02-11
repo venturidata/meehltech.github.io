@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Building a tighter analysis and prototyping workflow</title>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134207260-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-134207260-1');
+  </script>
+  
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <meta name="description" content=" ">
+  <meta name="keywords" content=" "/>
+  <link rel="canonical" href="/2019/01/25/building-tighter-computational-analysis-work-flow/">
+  <link rel="icon" type="image/png" href="/img/" sizes="16x16"/>
+  
+  <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/css/monokai.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/lightbox.min.css">
+  
+  <!-- Google verification -->
+  
+  
+  <!-- Bing Verification -->
+  
+  
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Lato:100,400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Jura:300,400,500,600,700" rel="stylesheet">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<html>
+  <body class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top clearfix">
+       <div class="container">
+           <!-- Brand and toggle get grouped for better mobile display -->
+           <div class="navbar-header page-scroll">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="/">Meehl Technologies</a>
+           </div>
+
+           <!-- Collect the nav links, forms, and other content for toggling -->
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav navbar-right">
+                   <li class="hidden">
+                       <a href="#page-top"></a>
+                   </li>
+                   <li class="page-scroll">
+                       <a href="#about">About </a>
+                   </li>
+                   <li class="page-scroll">
+                       <a href="#contact">Contact</a>
+                   </li>
+                   <li class="page-scroll">
+                       <a href="/blog">Blog</a>
+                   </li>
+               </ul>
+           </div>
+           <!-- /.navbar-collapse -->
+       </div>
+       <!-- /.container-fluid -->
+    </nav>
+
+    <page-container id="page-top">
+      <div class="container-fluid page-title">
+          <div class="row ">
+            <div class="col-md-offset-2 col-md-8 title">
+            <h2>Meehl Technologies Blog</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <article class="post">
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      <div class="lb-image hero_image" >
+  <a href="https://media.wired.com/photos/5933fcdcca941e4d0cb7a397/master/pass/condor.jpg" title="MacCready Gossamer Condor" data-lightbox="https://media.wired.com/photos/5933fcdcca941e4d0cb7a397/master/pass/condor.jpg" data-title="MacCready Gossamer Condor" >
+    <div><img src="https://media.wired.com/photos/5933fcdcca941e4d0cb7a397/master/pass/condor.jpg" /></div>
+  <span class="caption"></span>
+  </a>
+</div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-0 col-md-1"></div>
+    <div class="col-sm-12 col-md-10">
+      <h1>Building a tighter analysis and prototyping workflow</h1>
+      
+      
+
+<div class="author">
+
+
+  <a href="/keith">
+
+  <div style="background-image:url(/img/keith_avatar.png);" class="avatar"></div>
+
+  </a>
+
+  <!--img src="/img/_icon.png" class="avatar"/-->
+
+  <a href="/keith">
+
+  <div class="info">
+    <span>Keith Meehl</span>
+    
+    <span class="title">Principal Engineer @ Meehl Technologies</span>
+    <span class="date">Fri, Jan 25, 2019</span>
+  </div>
+
+  </a>
+
+</div>
+
+
+      <h2 class="subheading">Shifting focus from working a goal to engineering the process can create huge productivity gains.</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-0 col-md-1"></div>
+    <div class="col-sm-12 col-md-10">
+      <div class="entry">
+        <p>Human powered flight has historically been a particularly hard engineering nut to crack. An engineering challenge set by Brittish industrialist Henry Kremer in 1959 went unmet for 18 years — fly an entirely human powered aircraft in a figure eight pattern around two poles a half-mile apart. For almost 2 decades, the £50,000 prize remained out of reach, as dozens of teams failed to achieve the feat. Finally, a man named Paul MacCready and his team were able to meet the challenge within just six months of attempting it. In 1977, the MacCready <a href="https://en.wikipedia.org/wiki/MacCready_Gossamer_Condor">Gossamer Condor</a> became the first human powered aircraft capable of controlled and sustained flight. Just two years later, MacCready and team won the second <a href="https://en.wikipedia.org/wiki/Kremer_prize">Kremer prize</a> of £100,000 when the <a href="https://en.wikipedia.org/wiki/MacCready_Gossamer_Albatross">Gossamer Albatross</a> flew from England to France. What was so different about this team? What enabled them to find success where others could not?</p>
+
+<h3 id="a-change-in-focus">a change in focus</h3>
+
+<p>The secret to their success was to recognize that the problem that needed to be solved was not that of engineering human powered flight, but that the prototyping process for designing the aircraft was inefficient. MacCready recognized that the prototype-test-redesign loop was far too inefficient. While other teams were taking much longer – a year or more – to build their prototype aircraft, the MacCready team focused on finding ways to build, modify, and rebuild the aircraft quickly. Ultimately, the MacCready team was able to turn out a new prototype sometimes twice a day, while other teams took much, much longer to build their prototypes. It was this simple change in focus – from engineering the aircraft, to engineering the process – that enabled the team to vastly improve their prototyping efficiency, and ultimately, their engineering velocity.</p>
+
+<hr />
+
+<p>We often see a similar pattern in our own work. Perhaps it’s human nature to attack a problem or pursue a goal directly – almost blindly. We all want to feel that we’re making progress toward a goal; and attacking a problem head-on can often make us feel productive. This can lead us into work patterns that are less than efficient, perhaps without our awareness. So it’s often beneficial to step out of the heads-down work mode to examine how we’re solving problems.</p>
+
+<div class="lb-image ">
+  <a href="/img/building-tighter-analysis/dev_path.png" title="A shorter path to success" data-lightbox="/img/building-tighter-analysis/dev_path.png" data-title="A shorter path to success">
+    <div><img src="/img/building-tighter-analysis/dev_path.png" /></div>
+  <span class="caption">A shorter path to success</span>
+  </a>
+</div>
+
+<p>Often, bringing a new product to market involves research and development encompassing an iterative workflow. Whether the product is hardware, software, pharmaceutical or something else, there’s a build/test/analyze/modify loop that plays a huge roll in how fast we’re able to bring the product to market, and at what cost. Looking for ways to eliminate inefficiencies in that workflow loop can lead to huge gains in development velocity and cost, and a shorter path to success. It can be the difference between project success and failure; going to market and being beat to market; finishing in budget and blowing the budget. One thing that I like about the software world is that it offers us lots of opportunities to address such inefficiencies.</p>
+
+<h3 id="hacking-the-workflow">hacking the workflow</h3>
+<p>Not long ago, I worked with a client (let’s call them X Co) who is using computational analysis to design, test, and build their hardware product (XWare). In the process of designing and testing XWare, they had to endure a very cumbersome workflow loop involving quite a bit of manual work and a lot of repetition. This workflow consumed an enormous amount of time,  physical and mental energy, and caused X Co to struggle to meet milestones.</p>
+
+<p>The X Co workflow involved doing parametric studies to search for heuristic success indicators within a data set produced using computational flow analysis algorithms. That’s a bit  of a long-winded way of saying they need to repeatedly  and iteratively generate data in order to search through and analyze the data, looking for indicators of a successful design. At a high level, the process looks like this:</p>
+
+<div class="lb-image ">
+  <a href="/img/building-tighter-analysis/old_study_process.png" title="The original workflow" data-lightbox="/img/building-tighter-analysis/old_study_process.png" data-title="The original workflow">
+    <div><img src="/img/building-tighter-analysis/old_study_process.png" /></div>
+  <span class="caption">XWare parametric study</span>
+  </a>
+</div>
+
+<ol>
+  <li>Generate computational flow analysis data for a specific combination of XWare physical and environmental parameters. Each specific combination of parameters, known as a case, represents specific features of XWare and the environment it operates in. The computational flow algorithms analyze these features in order to generate specific performance data for a version of XWare.</li>
+  <li>Manually search the data set associated with the case for heuristic success indicators in order to accept or eliminate the solution represented by that case.</li>
+  <li>Manually perform analysis and produce and annotate graphs and other media for a successful case, or reject the unsuccessful case.</li>
+  <li>Repeat the above steps for every combination of parameters, in order to analyze every possible case in the study. This produces a large corpus of data and analysis artifacts which need to be collected, sorted, aggregated, and distilled into a final analysis.</li>
+  <li>Finally, aggregate analysis and results from each successful case in order to produce a full parametric study.</li>
+</ol>
+
+<p>The process of producing the computational flow data involved hand modifying a parameter and manually producing a data set for a new case. This produced a large, relatively disorganized data set representing a single case, which needed to be stored in an organized fashion for analysis. In addition, a practitioner would be required to wait quite some time while the data was being generated for the case. After data generation completed, he could begin to manually search the data set for heuristic success indicators, using a spreadsheet to look at a sea of numbers from raw CSV data. After this tedious process, the task of building and hand annotating graphs and other analysis media would begin. Finally, all of this work needed to be repeated for every combination of parameters in the search space.</p>
+
+<p>Having to repeat the entire cumbersome manual process for every combination of parameters is a Real Problem. To see why, consider that the number of cases to be analyzed grows multiplicatively with the number of possible values for each parameter in the study. So adding even a single new parameter value to the search space could greatly expand the size of the search space, leading to an enormous amount of new work.</p>
+
+<hr />
+<h2 id="redefine-the-problem-from-how-can-we-build-a-great-xware-to-how-can-we-build-a-great-xware-design-process">redefine the problem from “how can we build a great XWare?” to “how can we build a great XWare design process?”</h2>
+
+<p>Working with X Co, we were able to understand their workflow, and ultimately redefine the problem from “how can we build a great XWare?” to “how can we build a great XWare design process?”. We focused on building an efficient XWare design process that also empowers us to continuously improve the process itself. We chose technologies and made design decisions that we believed would lead to a system that is capable of growing and evolving. We started by defining three goals for the project:</p>
+
+<ul>
+  <li>eliminate the cumbersome workflow loop X Co found themselves working in</li>
+  <li>simplify and refine the process of doing analysis on the data</li>
+  <li>build a system that enables continuous process evolution, to enable growth that keeps pace with business needs</li>
+</ul>
+
+<h3 id="building-for-abstraction">building for abstraction</h3>
+<p>Our first task was to build a system that automates data generation, combining all data from all cases into a single search space. The new system allows X Co to generate all of the data in a search space by defining parameter values up front and just letting it run. This abstraction greatly compresses the amount of time required to generate test data, and frees up valuable brain real-estate to focus on analysis.</p>
+
+<p>We chose to employ <a href="http://lucene.apache.org/solr/">Apache Solr</a> as our data store. No doubt, some of you are asking, “why the hell would you use a search engine as a database for computational data?”. Well, when you think about it, Solr is actually a database — but with a more powerful query language than a typical SQL database. It’s fast, scalable, easy to deploy and configure, and capable of handling a wide range of use cases. Most of all, the query language lends itself well to teasing insights out of data. It’s often impossible to know what you’ll want to ask of your data in the future. So it’s important to choose a data store and query paradigm that can evolve with your needs, as they arise. We often reach for Solr in our data architecture projects.</p>
+
+<p>We chose to use Venturi to aggregate and normalize the data, and move it from flat files to Solr as it’s generated. Venturi is a framework we built and use internally with our clients to build scalable data processing (ETL) engines. It employs a pluggable architecture and a custom transformation description language that makes it easy to describe a transformation pipeline, and route data from a data source to a data sink. Venturi also greatly simplifies the process of updating and iterating on the transformation pipeline to address changing data or business requirements. And since it’s scalable out of the box, it can grow with the size of the data set. So our use of Venturi builds nicely on our goal of enabling continuous process evolution.</p>
+
+<h3 id="refining-the-analysis">refining the analysis</h3>
+<p>Having addressed data generation, we turned to data retrieval and analysis, aiming to simplify and automate heuristic search where it made sense.
+There were a number of concerns for this part of the project, including the size of the data set (and the high probability it will continue to grow), convenient remote access, and support for multiple users. So a web based analysis portal made sense for this project.
+In addition to supporting scalability and enabling portability, it allows for fast deployments of fixes and enhancements.</p>
+
+<p>Working with X Co, we defined a standard set of heuristic visualizations they use to analyze each case.
+The portal was designed to generate these visualizations automatically for the full study.
+Pulling all of the data for a study into a single search space enables analysis at a level previously unavailable to X Co.
+Starting with the standard visualizations, users can use filters to limit parameter values, eliminating irrelevant cases and updating their visualizations in real-time.
+Using the new portal, it’s easy to quickly visualize success cases, determine successful parametric ranges, and compare multiple cases with one another.
+The portal also makes it easy to visualize and eliminate failure cases from the study, so that focus can remain on the success cases.
+Finally, the portal makes it easy to export analysis graphics along with the underlying data, in order to build the full parametric study.</p>
+
+<h3 id="summing-up">summing up</h3>
+<p>By isolating repetition and encapsulating it into a software abstraction, X Co realized a surprisingly large gain in development velocity.
+And they have the ability to continue improving their development process over time, thanks to a software system designed from the ground up to be malleable.
+With continued diligence, their development process will grow and evolve with them.
+Most importantly, their gains will continue to compound, as they have more time and mental real-estate to focus on the other aspects of their path to success.</p>
+
+<p>The inefficient iterative workflow loop we saw with X Co is surprisingly common. Unfortunately, it can be difficult to step out of the work to examine how it can be done more efficiently.
+But doing just that can be an important part of finding success – and it can lead to big, relatively cheap gains in development velocity.
+Any time we observe ourselves doing repetitive work, it could be regarded as the canary in the coal mine, and an opportunity to improve our approach.
+Can you identify the ways that you’re working inefficiently?
+Next time you do, think about how can you improve your approach to your work and increase your own velocity.</p>
+
+
+      </div>
+    </div>
+  </div>
+
+  
+  
+
+
+
+  <div class="row">
+    <div class="col-sm-0 col-md-1"></div>
+    <div class="col-sm-8 col-md-6">
+
+      <div class="author author_footer">
+      
+        <a href="/keith">
+      
+        <div style="background-image:url(/img/keith_avatar.png);" class="avatar"></div>
+      
+        </a>
+      
+        <!--img src="/img/_icon.png" class="avatar"/-->
+      
+        <a href="/keith">
+      
+        <div class="info">
+          <span class="title">Principal Engineer @ Meehl Technologies</span>
+          <span>
+Keith is a software developer and consultant who works with companies of all sizes to help them solve business challenges through innovative software solutions. Outside the office, he's happiest building something using a 3D printer and an Arduino, sailing, or running.
+</span>
+        </div>
+      
+        </a>
+      
+      </div>
+    </div>
+  </div>
+
+
+</article>
+
+      </div>
+    </page-container>
+
+    <!-- Contact Section -->
+<section id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>Chat With Us</h2>
+				<hr />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<form  action="//formspree.io/info@meehl.tech" method="POST" name="sentMessage" id="contactForm" novalidate>
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>Name</label>
+							<input type="text" name="name" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>Email Address</label>
+							<input type="email" name="_replyto" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<div>
+						<input type="hidden"  name="_subject" value="New submission!">
+						<input type="text" name="_gotcha" style="display:none" />
+					</div>
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>Message</label>
+							<textarea rows="5" name="message" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<br>
+					<div id="success"></div>
+					<div class="row">
+						<div class="form-group col-xs-12">
+							<button type="submit" class="btn btn-success btn-lg">Send</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Meehl Technologies 2019
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src='/js/jquery-1.11.0.js'></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src='/js/bootstrap.min.js'></script>
+
+    <!-- Plugin JavaScript -->
+    <script src='/js/jquery.easing.min.js'></script>
+    <script src='/js/classie.js'></script>
+    <script src='/js/cbpAnimatedHeader.js'></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src='/js/jqBootstrapValidation.js'></script>
+    <script src='/js/contact_me_static.js'></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src='/js/freelancer.js'></script>
+    <script src='/js/lightbox.min.js'></script>
+  </body>
+</html>
